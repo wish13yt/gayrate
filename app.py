@@ -42,10 +42,10 @@ async def on_message(message):
             await message.reply(f"You are {str(percent)}% gay! 🏳️‍🌈")
 
     if message.content.startswith("&lesbian"):
-        percent = random.randrange(0, 101)
+        percent = random.randrange(0, 110)
         if percent == 50:
             await message.reply("You are bisexual!", mention_author=True)
-        elif percent == 101:
+        elif percent > 100:
             await message.reply("You are ULTRA-LESBIAN! (101%)", mention_author=True)
         elif percent == 0:
             await message.reply("You are scary (0% lesbian)", mention_author=True)
@@ -53,10 +53,10 @@ async def on_message(message):
             await message.reply(f"You are {str(percent)}% lesbian! 🏳️‍🌈")
 
     if message.content.startswith("&trans"):
-        percent = random.randrange(0, 101)
+        percent = random.randrange(0, 110)
         if percent == 50:
             await message.reply("You are genderfluid!", mention_author=True)
-        elif percent == 101:
+        elif percent > 100:
             await message.reply("You are ULTRA-TRANS! (101%)", mention_author=True)
         elif percent == 0:
             await message.reply("You are scary (0% trans)", mention_author=True)
