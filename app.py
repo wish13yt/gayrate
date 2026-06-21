@@ -16,12 +16,23 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith("&gay"):
+    if message.content.startswith("&oldgay"):
         percent = random.randrange(0, 101)
         if percent == 50:
             await message.reply("You are bisexual!", mention_author=True)
         elif percent == 101:
-            await message.reply("You are ULTRA-GAY! (101%)", mention_author=True)
+            await message.reply(f"You are ULTRA-GAY! (101%)", mention_author=True)
+        elif percent == 0:
+            await message.reply("You are scary (0% gay)", mention_author=True)
+        else:
+            await message.reply(f"You are {str(percent)}% gay! 🏳️‍🌈")
+
+    if message.content.startswith("&gay"):
+        percent = random.randrange(0, 110)
+        if percent == 50:
+            await message.reply("You are bisexual!", mention_author=True)
+        elif percent > 100:
+            await message.reply(f"You are ULTRA-GAY! ({str(percent)}%)", mention_author=True)
         elif percent == 0:
             await message.reply("You are scary (0% gay)", mention_author=True)
         else:
