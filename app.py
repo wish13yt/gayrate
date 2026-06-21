@@ -1,7 +1,10 @@
 # This example requires the 'message_content' intent.
 
 import discord, random
+from dotenv import load_dotenv
+from os import getenv
 
+load_dotenv()
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -64,4 +67,4 @@ async def on_message(message):
     if message.content.startswith("&bisexual"):
         await message.reply("You are 50% gay! (what did you think would happen?)")
 
-client.run('MTUxODA1NTAwMDA1ODg4ODM5MQ.G_9sfg.L9CRtqtAe-OKkEZUr6WcGQZUeN2p5f377b-b4I')
+client.run(getenv("TOKEN"))
