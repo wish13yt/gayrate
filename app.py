@@ -22,9 +22,6 @@ async def on_message(message):
             await message.reply("You are bisexual!", mention_author=True)
         elif percent == 101:
             await message.reply(f"You are ULTRA-GAY! (101%)", mention_author=True)
-            if message.author.id == 1296462287007121418:
-                await message.reply("@everyone NAMES GOT ULTRA-GAY!! LETS ALL CELEBRATE", mention_author=True)
-                return SystemExit
         elif percent == 0:
             await message.reply("You are scary (0% gay)", mention_author=True)
         else:
