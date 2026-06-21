@@ -1,5 +1,3 @@
-# This example requires the 'message_content' intent.
-
 import discord, random
 from dotenv import load_dotenv
 from os import getenv
@@ -37,6 +35,8 @@ async def on_message(message):
             await message.reply("You are bisexual!", mention_author=True)
         elif percent > 100:
             await message.reply(f"You are ULTRA-GAY! ({str(percent)}%)", mention_author=True)
+        elif percent == 101:
+            await message.reply("You are names_real on Discord!", mention_author=True)
         elif percent == 0:
             await message.reply("You are scary (0% gay)", mention_author=True)
         else:
