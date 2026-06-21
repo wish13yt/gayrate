@@ -17,7 +17,7 @@ async def on_message(message):
         return
 
     if message.content.startswith("&oldgay"):
-        percent = random.randrange(0, 101)
+        percent = random.randrange(0, 102)
         if percent == 50:
             await message.reply("You are bisexual!", mention_author=True)
         elif percent == 101:
